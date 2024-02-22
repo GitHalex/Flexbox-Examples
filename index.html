@@ -6,26 +6,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo Flexbox</title>
   <style>
-    .container {
-      background-color: #6d6d6d;
-      display: inline-flex;
-      border: solid;
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    .titulares {
+      padding: 1rem;
+      background-color: #222;
+      color: #EEE;
+    }
+
+    .menu ul {
+      list-style-type: none;
+    }
+
+    @media screen and (min-width: 1024px) {
+      .header {
+        display: flex;
+      }
+
+      .menu,
+      ul {
+        display: flex;
+      }
     }
   </style>
 </head>
 
 <body>
-  <section class="container">
-    <article class="item">Flex Item 1</article>
-    <article class="item">Flex Item 2</article>
-    <article class="item">Flex Item 3</article>
-  </section>
-  <section class="container">
-    <article class="item">Flex Item 1</article>
-    <article class="item">Flex Item 2</article>
-    <article class="item">Flex Item 3</article>
-  </section>
+  <header class="titulares header">
+    <div class="logo">Logo</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Contenido</h2>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum inventore odit eveniet? Exercitationem
+      ad, nulla iure sit suscipit voluptate aut dignissimos dolor eligendi incidunt aliquam omnis, animi esse iste.</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </main>
+  <footer class="titulares">
+    <h2> StikyFooter</h2>
+  </footer>
 
 </body>
 
